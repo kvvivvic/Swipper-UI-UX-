@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/75062a3531.js" crossorigin="anonymous"></script>
+  <script defer src="./main.js"></script>
+  <title>Swiper</title>
+</head>
+
+<body>
+  <div class="wrap">
+    <h1>THE <span>GUITAR</span></h1>
+    <ul class="auto">
+      <li class="btnStart">
+        <i class="fas fa-play"></i>
+      </li>
+      <li class="btnStop">
+        <i class="fa-solid fa-pause"></i>
+      </li>
+    </ul>
+
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="inner">
+          <div class="con">
+            <img src="./image/guitar.jpg" alt="">
+            <h2>THE GUITAR</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, reprehenderit?</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="inner">
+          <div class="con">
+            <img src="./image/elecguitar.jpg" alt="">
+            <h2>ELECTRIC GUITAR</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, eius?</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="inner">
+          <div class="con">
+            <img src="./image/acguitar.jpg" alt="">
+            <h2>ACUSTIC GUITAR</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, quae?</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="inner">
+          <div class="con">
+            <img src="./image/jazzguitar.jpg" alt="">
+            <h2>JAZZ GUITAR</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nihil.</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="inner">
+          <div class="con">
+            <img src="./image/Effector.jpg" alt="">
+            <h2>Effector</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, eligendi?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".wrap", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      }, 
+      slidesPerView: "auto",
+      spaceBetween : 50,
+      loop : true ,
+      centeredSlides : true ,
+      speed: 1000,
+      effect : "coverflow" ,
+      coverflowEffect : {
+        rotate :50 ,
+        stretch : -100 ,
+        depth : 400 ,
+        modifier :1 ,
+        slideShadows : false ,
+      }
+    });
+  </script>
+</body>
+
+</html>
